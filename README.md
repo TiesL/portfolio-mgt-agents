@@ -47,6 +47,10 @@ portfolio-management-agents/
 - **English + Markdown, role-aware, checkbox/fill-in-the-blank format** for all templates, even though the source materials from Didier are in Dutch and Word/PowerPoint. (DEC-004)
 - **No client-identifying examples** (e.g. the Feyenoord references present in Didier's original source RTF) in anything we produce.
 
+## Updating the Decision Log
+
+If a design or scoping decision is made while working in this repo — including ones proposed by an agent and approved by a human — add a new dated entry to `docs/decisions/DECISION-LOG.md` rather than editing history. If a decision supersedes an earlier one, mark the earlier entry "Superseded by Entry N" (see Entry 2 for the pattern) rather than deleting it.
+
 ## Relationship to the Wider Decision Velocity Proposition
 
 Decision Velocity has two building blocks operating at different cadences:
