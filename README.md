@@ -1,0 +1,57 @@
+# Portfolio Management Agents
+
+Part of the **Decision Velocity** proposition (Ties & Didier). This repository is the specification and starting point for building an agent-based portfolio governance system: a strictly linear, six-phase project lifecycle (Idea → Definition → Design → Realization → Go-Live → Closure) in which specialized advisor agents assess project documentation at each governance gate, and human decision-makers (Portfolio Board, Steering Group) retain all Go/No-Go authority.
+
+This is a specification-first repository. No application code exists yet — the intent is to open this repo in Claude Code (Plan Mode recommended for the first pass) and use these documents as the brief for scoping and building the system.
+
+## Start Here
+
+1. **[`docs/prd/PRD.md`](docs/prd/PRD.md)** — the product requirements document: problem, goals, non-goals, system overview, and links into everything else. Read this first.
+2. **[`docs/decisions/DECISION-LOG.md`](docs/decisions/DECISION-LOG.md)** — every product/architecture decision made so far, with options considered and rationale. Treat this as binding unless a new entry supersedes one.
+3. **[`docs/decisions/roles-and-personas.md`](docs/decisions/roles-and-personas.md)** — the 11 human roles across 4 governance tiers who use this system.
+4. **[`docs/prd/agent-specifications.md`](docs/prd/agent-specifications.md)** — full behavioral specification for each of the 6 advisor agents.
+5. **[`docs/prd/project-lifecycle-flow.md`](docs/prd/project-lifecycle-flow.md)** — the 6-phase lifecycle, gates, and decision criteria.
+6. **[`templates/execution-templates.md`](templates/execution-templates.md)** — the actual Markdown templates (project idea, brief, PID, PSA, status report, go/no-go, change request, closure, etc.) the agents assess against and that end users fill in.
+7. **[`docs/diagrams/`](docs/diagrams/)** — visual flowchart of the lifecycle (Mermaid source + rendered HTML).
+8. **[`reference/didier-source-materials/`](reference/didier-source-materials/)** — the original field documents (Dutch) this system's roles and templates were aligned against. Reference only — do not edit; if a template needs to change, change `templates/execution-templates.md` and log why in the Decision Log.
+
+## Repository Structure
+
+```
+portfolio-management-agents/
+├── README.md                          ← you are here
+├── CLAUDE.md                          ← guidance for Claude Code when working in this repo
+├── docs/
+│   ├── prd/
+│   │   ├── PRD.md                     ← main product requirements document
+│   │   ├── agent-specifications.md    ← behavior spec for all 6 advisor agents
+│   │   └── project-lifecycle-flow.md  ← 6-phase lifecycle, gates, governance
+│   ├── decisions/
+│   │   ├── DECISION-LOG.md            ← all logged decisions (DEC-001 through DEC-004+)
+│   │   └── roles-and-personas.md      ← 11 human roles across 4 governance tiers
+│   └── diagrams/
+│       ├── project_flow_diagram.mermaid
+│       └── project_flow_diagram.html
+├── templates/
+│   └── execution-templates.md         ← all execution/governance templates (role-aware, phase-mapped)
+└── reference/
+    └── didier-source-materials/       ← original Dutch source docs (RTF/DOCX/PPTX) — reference only
+        └── templates/
+```
+
+## Key Constraints (do not violate without a new Decision Log entry)
+
+- **Strictly linear governance.** No phase-skipping, no exception paths. The only flexibility mechanism is looping back to an earlier phase. (DEC-002 REVISED)
+- **Humans decide, agents assess.** No agent has Go/No-Go authority in Release 1.0. (DEC-001)
+- **Role descriptions are functional, not job titles.** The system must work for organizations of any size — a small org may combine several roles into one person. (DEC-003)
+- **English + Markdown, role-aware, checkbox/fill-in-the-blank format** for all templates, even though the source materials from Didier are in Dutch and Word/PowerPoint. (DEC-004)
+- **No client-identifying examples** (e.g. the Feyenoord references present in Didier's original source RTF) in anything we produce.
+
+## Relationship to the Wider Decision Velocity Proposition
+
+Decision Velocity has two building blocks operating at different cadences:
+
+- **Portfolio Management Agents** (this repo) — the portfolio cycle.
+- **Software Development Workflow Agents** (separate system, not in this repo) — the product/release/sprint/day cycle. That system is intentionally *non-linear* (looping, exception paths, phase-skipping are all permitted there), which is the opposite of this system's strictly linear model — don't import assumptions from one into the other.
+
+Integration/handoff points between the two systems are a known, deliberately deferred gap.

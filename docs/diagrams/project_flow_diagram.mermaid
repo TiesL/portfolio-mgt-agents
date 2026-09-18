@@ -1,0 +1,51 @@
+graph TD
+    Start([Project Initiation]) --> Idea["<b>PHASE 1: IDEA</b><br/>---<br/>Define concept<br/>Assess rationale & objectives<br/>Initial cost/benefit estimates"]
+
+    Idea --> IdeaGate{"<b>IDEA GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: Project Idea<br/>Approval"}
+
+    IdeaGate -->|Approved| Definition["<b>PHASE 2: DEFINITION</b><br/>---<br/>Establish governance<br/>Conduct kickoff<br/>Develop detailed scope<br/>Refine budget & resources"]
+
+    IdeaGate -->|Rejected| IdeaEnd([Return to Idea<br/>or Reject])
+
+    Definition --> DefGate{"<b>DEFINITION GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: Project Brief<br/>Approval"}
+
+    DefGate -->|Approved| Design["<b>PHASE 3: DESIGN</b><br/>---<br/>Detailed requirements<br/>Engage subject matter experts<br/>Technical coordination<br/>Architecture planning"]
+
+    DefGate -->|Rejected| DefEnd([Return to Definition<br/>or Reject])
+
+    Design --> DesignGate{"<b>DESIGN GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: PID & PSA<br/>Approval"}
+
+    DesignGate -->|Approved| Realization["<b>PHASE 4: REALIZATION</b><br/>---<br/>Execute project work<br/>Manage coordination<br/>Monitor status<br/>Manage risks & issues<br/>Steering Group: Bi-weekly"]
+
+    DesignGate -->|Rejected| DesignEnd([Return to Design<br/>or Reject])
+
+    Realization --> RealizationGate{"<b>REALIZATION GATE</b><br/>---<br/>Steering Group Review<br/>---<br/>Status: On Track?<br/>Escalations Managed?"}
+
+    RealizationGate -->|Continue| Realization
+    RealizationGate -->|Complete| GoLive["<b>PHASE 5: GO-LIVE</b><br/>---<br/>Execute testing<br/>Establish support org<br/>Assign responsibilities<br/>Conduct training"]
+
+    GoLive --> GoLiveGate{"<b>GO-LIVE GATE</b><br/>---<br/>Steering Group Approval<br/>---<br/>Go: Go-Live Request<br/>Approved?"}
+
+    GoLiveGate -->|Approved| Closure["<b>PHASE 6: HANDOVER<br/>& CLOSURE</b><br/>---<br/>Final validation<br/>System goes live<br/>Post-implementation support<br/>Knowledge transfer<br/>Lessons learned"]
+
+    GoLiveGate -->|Not Ready| GoLiveReturn([Return to Go-Live<br/>Preparation])
+
+    Closure --> ClosureGate{"<b>CLOSURE GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: Project Closure<br/>Approval"}
+
+    ClosureGate -->|Approved| End([Project Complete<br/>Transferred to Operations])
+
+    ClosureGate -->|Issues| ClosureReturn([Resolve Issues<br/>Resubmit])
+
+    style Idea fill:#e8e4d0,stroke:#333,stroke-width:2px
+    style Definition fill:#8b8660,stroke:#333,stroke-width:2px,color:#fff
+    style Design fill:#e8e4d0,stroke:#333,stroke-width:2px
+    style Realization fill:#8b8660,stroke:#333,stroke-width:2px,color:#fff
+    style GoLive fill:#e8e4d0,stroke:#333,stroke-width:2px
+    style Closure fill:#8b8660,stroke:#333,stroke-width:2px,color:#fff
+
+    style IdeaGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style DefGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style DesignGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style RealizationGate fill:#d4edda,stroke:#333,stroke-width:2px
+    style GoLiveGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style ClosureGate fill:#fff3cd,stroke:#333,stroke-width:2px

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Lifecycle Flow</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .legend-item {
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .phase-box {
+            background: #e8e4d0;
+            border: 2px solid #333;
+        }
+        .phase-box-alt {
+            background: #8b8660;
+            color: white;
+            border: 2px solid #333;
+        }
+        .gate-box {
+            background: #fff3cd;
+            border: 2px solid #333;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Lifecycle Flow Diagram</h1>
+
+        <div class="legend">
+            <div class="legend-item phase-box"><strong>Project Phases</strong> (Alternating)</div>
+            <div class="legend-item phase-box-alt"><strong>Project Phases</strong> (Alternating)</div>
+            <div class="legend-item gate-box"><strong>Decision Gates</strong> - Go/No-Go Points</div>
+        </div>
+
+        <div class="mermaid">
+graph TD
+    Start([Project Initiation]) --> Idea["<b>PHASE 1: IDEA</b><br/>---<br/>Define concept<br/>Assess rationale & objectives<br/>Initial cost/benefit estimates"]
+
+    Idea --> IdeaGate{"<b>IDEA GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: Project Idea<br/>Approval"}
+
+    IdeaGate -->|Approved| Definition["<b>PHASE 2: DEFINITION</b><br/>---<br/>Establish governance<br/>Conduct kickoff<br/>Develop detailed scope<br/>Refine budget & resources"]
+
+    IdeaGate -->|Rejected| IdeaEnd([Return to Idea<br/>or Reject])
+
+    Definition --> DefGate{"<b>DEFINITION GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: Project Brief<br/>Approval"}
+
+    DefGate -->|Approved| Design["<b>PHASE 3: DESIGN</b><br/>---<br/>Detailed requirements<br/>Engage subject matter experts<br/>Technical coordination<br/>Architecture planning"]
+
+    DefGate -->|Rejected| DefEnd([Return to Definition<br/>or Reject])
+
+    Design --> DesignGate{"<b>DESIGN GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: PID & PSA<br/>Approval"}
+
+    DesignGate -->|Approved| Realization["<b>PHASE 4: REALIZATION</b><br/>---<br/>Execute project work<br/>Manage coordination<br/>Monitor status<br/>Manage risks & issues<br/>Steering Group: Bi-weekly"]
+
+    DesignGate -->|Rejected| DesignEnd([Return to Design<br/>or Reject])
+
+    Realization --> RealizationGate{"<b>REALIZATION GATE</b><br/>---<br/>Steering Group Review<br/>---<br/>Status: On Track?<br/>Escalations Managed?"}
+
+    RealizationGate -->|Continue| Realization
+    RealizationGate -->|Complete| GoLive["<b>PHASE 5: GO-LIVE</b><br/>---<br/>Execute testing<br/>Establish support org<br/>Assign responsibilities<br/>Conduct training"]
+
+    GoLive --> GoLiveGate{"<b>GO-LIVE GATE</b><br/>---<br/>Steering Group Approval<br/>---<br/>Go: Go-Live Request<br/>Approved?"}
+
+    GoLiveGate -->|Approved| Closure["<b>PHASE 6: HANDOVER<br/>& CLOSURE</b><br/>---<br/>Final validation<br/>System goes live<br/>Post-implementation support<br/>Knowledge transfer<br/>Lessons learned"]
+
+    GoLiveGate -->|Not Ready| GoLiveReturn([Return to Go-Live<br/>Preparation])
+
+    Closure --> ClosureGate{"<b>CLOSURE GATE</b><br/>---<br/>Portfolio Board Review<br/>---<br/>Go: Project Closure<br/>Approval"}
+
+    ClosureGate -->|Approved| End([Project Complete<br/>Transferred to Operations])
+
+    ClosureGate -->|Issues| ClosureReturn([Resolve Issues<br/>Resubmit])
+
+    style Idea fill:#e8e4d0,stroke:#333,stroke-width:2px
+    style Definition fill:#8b8660,stroke:#333,stroke-width:2px,color:#fff
+    style Design fill:#e8e4d0,stroke:#333,stroke-width:2px
+    style Realization fill:#8b8660,stroke:#333,stroke-width:2px,color:#fff
+    style GoLive fill:#e8e4d0,stroke:#333,stroke-width:2px
+    style Closure fill:#8b8660,stroke:#333,stroke-width:2px,color:#fff
+
+    style IdeaGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style DefGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style DesignGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style RealizationGate fill:#d4edda,stroke:#333,stroke-width:2px
+    style GoLiveGate fill:#fff3cd,stroke:#333,stroke-width:2px
+    style ClosureGate fill:#fff3cd,stroke:#333,stroke-width:2px
+        </div>
+    </div>
+
+    <script>
+        mermaid.contentLoaderCfg = { type: 'iframe', check: 'once', delay: 0 };
+        mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+        mermaid.contentLoaderCfg.check = 'once';
+        mermaid.run();
+    </script>
+</body>
+</html>
