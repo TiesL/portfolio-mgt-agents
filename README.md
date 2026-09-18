@@ -13,7 +13,8 @@ This is a specification-first repository. No application code exists yet — the
 5. **[`docs/prd/project-lifecycle-flow.md`](docs/prd/project-lifecycle-flow.md)** — the 6-phase lifecycle, gates, and decision criteria.
 6. **[`templates/execution-templates.md`](templates/execution-templates.md)** — the actual Markdown templates (project idea, brief, PID, PSA, status report, go/no-go, change request, closure, etc.) the agents assess against and that end users fill in.
 7. **[`docs/diagrams/`](docs/diagrams/)** — visual flowchart of the lifecycle (Mermaid source + rendered HTML).
-8. **[`reference/didier-source-materials/`](reference/didier-source-materials/)** — the original field documents (Dutch) this system's roles and templates were aligned against. Reference only — do not edit; if a template needs to change, change `templates/execution-templates.md` and log why in the Decision Log.
+
+Didier's original Dutch-language field documents (RTF/DOCX/PPTX) that this system's roles and templates were aligned against are deliberately **not** in this repo — not needed going forward, and not appropriate to publish. If a template needs to change, change `templates/execution-templates.md` and log why in the Decision Log.
 
 ## Repository Structure
 
@@ -32,11 +33,8 @@ portfolio-management-agents/
 │   └── diagrams/
 │       ├── project_flow_diagram.mermaid
 │       └── project_flow_diagram.html
-├── templates/
-│   └── execution-templates.md         ← all execution/governance templates (role-aware, phase-mapped)
-└── reference/
-    └── didier-source-materials/       ← original Dutch source docs (RTF/DOCX/PPTX) — reference only
-        └── templates/
+└── templates/
+    └── execution-templates.md         ← all execution/governance templates (role-aware, phase-mapped)
 ```
 
 ## Key Constraints (do not violate without a new Decision Log entry)
