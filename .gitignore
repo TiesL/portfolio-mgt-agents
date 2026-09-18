@@ -2,3 +2,9 @@
 *.log
 .env
 node_modules/
+
+# claude-workflow: begin — managed block, do not edit by hand
+CLAUDE.md
+.claude/settings.json
+.claude/skills/
+# claude-workflow: end
