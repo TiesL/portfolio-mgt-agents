@@ -58,7 +58,7 @@ Eleven roles across four tiers (Portfolio Board, Steering Group, Execution, Supp
 
 ### 4.4 Templates
 
-Nine primary + two supporting Markdown templates, role-aware and phase-mapped, aligned to Didier's field templates. See [`../../templates/execution-templates.md`](../../templates/execution-templates.md).
+Nine primary + two supporting Markdown templates, role-aware and phase-mapped, aligned to Didier's field templates, each in its own file. See [`../../templates/execution-templates.md`](../../templates/execution-templates.md) for the index.
 
 ## 5. Key Decisions
 
@@ -70,4 +70,4 @@ Tracked in full in the Decision Log's "Open Items Carried Forward" section. Head
 
 ## 7. Source Materials
 
-This PRD's roles and templates were aligned against original field documents from Didier (Dutch-language RTF, DOCX, PPTX). Those source files are deliberately not part of this repository — not needed going forward, and not appropriate to publish. Ground truth for structure now lives in [`agent-specifications.md`](./agent-specifications.md), [`roles-and-personas.md`](../decisions/roles-and-personas.md), and [`../../templates/execution-templates.md`](../../templates/execution-templates.md).
+This PRD's roles and templates were aligned against original field documents from Didier (Dutch-language RTF, DOCX, PPTX). Those source files are deliberately not part of this repository — not needed going forward, and not appropriate to publish. Ground truth for structure now lives in [`agent-specifications.md`](./agent-specifications.md), [`roles-and-personas.md`](../decisions/roles-and-personas.md), and the templates indexed at [`../../templates/execution-templates.md`](../../templates/execution-templates.md).
