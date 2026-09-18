@@ -48,6 +48,14 @@ portfolio-management-agents/
     └── Portfolio Health Dashboard Template.md
 ```
 
+## Validating Changes
+
+Run `./check` before committing — it's the single entry point for
+everything that decides whether a change is good (see the
+`check-convention` skill), currently the traceability check
+(`check-traceability.sh`). CI calls the same command; nothing separate is
+invented for either.
+
 ## Key Constraints (do not violate without a new Decision Log entry)
 
 - **Strictly linear governance.** No phase-skipping, no exception paths. The only flexibility mechanism is looping back to an earlier phase. (DEC-002 REVISED)
