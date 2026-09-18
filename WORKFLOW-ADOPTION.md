@@ -13,7 +13,7 @@ the question shows up on its own once that changes.
 | test-feature-gwt | yes | 2026-09-18 | Each agent's "Execution Format" and phase-gate behavior is a natural Given/When/Then feature: given a submitted document, when assessed, then a specific recommendation/classification. |
 | test-tdd-seams | yes | 2026-09-18 | No implementation exists yet, so no seams are agreed yet — applies once implementation planning identifies them. |
 | quality-review-before-merge | yes | 2026-09-18 | Standard practice; no reason for this project to deviate once PRs start landing. |
-| ci-gate-on-merge | yes | 2026-09-18 | Standard practice; applies once a `check` command exists to gate on. |
+| ci-gate-on-merge | yes | 2026-09-18 | Standard practice; applies once a `check` command exists to gate on. `.github/workflows/ci.yml` now runs `./check` on PRs and pushes to `main` (issue #9), so this row's postcondition holds — hand-rolled rather than `adopt.sh`-scaffolded, since that scaffolding is gated on `package.json` (flagged upstream to spec-driven-guardrails). |
 | stray-closes-guard | yes | 2026-09-18 | Standard practice; every work item will be filed as a GitHub issue per `write-spec`. |
 | process-technical-debt-register | yes | 2026-09-18 | `PRD.md`'s Technical debt table already has one entry (the dual-PRD situation) — the register is in active use from day one. |
 | process-refactoring-triggers | yes | 2026-09-18 | Standard practice; the six independent agents (DEC-002 REVISED) give a clear place to notice when a "process coordinator, not decision-maker" boundary is being violated. |
