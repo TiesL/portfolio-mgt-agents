@@ -167,5 +167,5 @@ findings land here too. See *Complexity, technical debt, refactoring* in
 | `docs/prd/agent-specifications.md` | Full behavioral spec for each of the six advisor agents (F1–F6). |
 | `docs/prd/project-lifecycle-flow.md` | The six-phase governance flow and gate structure (F7). |
 | `docs/diagrams/project_flow_diagram.mermaid` / `.html` | Visual rendering of the lifecycle flow. |
-| `templates/execution-templates.md` | The nine primary + two supporting Markdown governance templates (F8). |
+| `templates/execution-templates.md` | Index linking to the nine primary + two supporting Markdown governance templates, each in its own file (F8). |
 | `CONTEXT.md` | Project jargon glossary (PID, PSA, Portfolio Board, DEC-XXX, etc.), separate from `ARCHITECTURE.md`'s structural decisions. |

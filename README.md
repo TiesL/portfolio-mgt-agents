@@ -11,7 +11,7 @@ This is a specification-first repository. No application code exists yet — the
 3. **[`docs/decisions/roles-and-personas.md`](docs/decisions/roles-and-personas.md)** — the 11 human roles across 4 governance tiers who use this system.
 4. **[`docs/prd/agent-specifications.md`](docs/prd/agent-specifications.md)** — full behavioral specification for each of the 6 advisor agents.
 5. **[`docs/prd/project-lifecycle-flow.md`](docs/prd/project-lifecycle-flow.md)** — the 6-phase lifecycle, gates, and decision criteria.
-6. **[`templates/execution-templates.md`](templates/execution-templates.md)** — the actual Markdown templates (project idea, brief, PID, PSA, status report, go/no-go, change request, closure, etc.) the agents assess against and that end users fill in.
+6. **[`templates/execution-templates.md`](templates/execution-templates.md)** — index into the actual Markdown templates (project idea, brief, PID, PSA, status report, go/no-go, change request, closure, etc.), each in its own file, that the agents assess against and that end users fill in.
 7. **[`docs/diagrams/`](docs/diagrams/)** — visual flowchart of the lifecycle (Mermaid source + rendered HTML).
 
 Didier's original Dutch-language field documents (RTF/DOCX/PPTX) that this system's roles and templates were aligned against are deliberately **not** in this repo — not needed going forward, and not appropriate to publish. If a template needs to change, change `templates/execution-templates.md` and log why in the Decision Log.
@@ -34,7 +34,18 @@ portfolio-management-agents/
 │       ├── project_flow_diagram.mermaid
 │       └── project_flow_diagram.html
 └── templates/
-    └── execution-templates.md         ← all execution/governance templates (role-aware, phase-mapped)
+    ├── execution-templates.md         ← index into the 11 template files below
+    ├── Project Idea Submission Template.md
+    ├── Project Brief Template.md
+    ├── Project Initiation Document (PID) Template.md
+    ├── Project Start Architecture Template.md
+    ├── Project Status Report Template.md
+    ├── Project Escalation Request Template.md
+    ├── Go_No-Go Decision Template.md   ← "Go/No-Go" with the slash replaced (illegal in filenames)
+    ├── Change Request Template.md
+    ├── Project Closure Assessment Template.md
+    ├── Decision Authority Matrix.md
+    └── Portfolio Health Dashboard Template.md
 ```
 
 ## Key Constraints (do not violate without a new Decision Log entry)

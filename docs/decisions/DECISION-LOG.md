@@ -144,6 +144,29 @@ Didier's templates reflect real, field-tested governance documents already in us
 
 ---
 
+## Entry 5
+
+**Decision ID:** DEC-005
+**Topic:** Execution Templates File Structure
+**Status:** Approved
+
+**Decision Made:**
+Split `templates/execution-templates.md`'s 11 templates into one standalone `.md` file per template, named after the template itself. Keep `execution-templates.md` as an index/table of contents linking to the 11 files, rather than deleting it.
+
+**Options Considered:**
+- Leave all 11 templates bundled in one file — Denied (harder to read/edit/reference a single template independently as the system grows)
+- Split into 11 files and delete `execution-templates.md` — Denied (every existing cross-reference in `README.md`, `PRD.md`, `docs/prd/PRD.md`, and this log points at `templates/execution-templates.md` as *the* template set; deleting it would break all of them for no benefit, since none of those references single out one template)
+- **Split into 11 files, keep `execution-templates.md` as an index — CHOSEN**
+
+**Rationale:**
+Splitting makes each template independently readable/editable/referenceable. Keeping the original file as an index means every existing "the templates live at `templates/execution-templates.md`" reference in this repo remains correct as written — it's now the entry point into the set rather than the set itself, with no cross-reference rewrites required.
+
+**Filename note:** Template 7's actual name contains a `/` ("Go/No-Go Decision Template"), which cannot be a literal filename component. Confirmed with Ties: the file is `Go_No-Go Decision Template.md` (underscore replacing the slash); the index and every reference display the real name with the slash, only the filename itself substitutes it.
+
+**Result:** `templates/` now contains `execution-templates.md` (index) plus 11 standalone template files. Content was moved verbatim; only the per-template heading level/numbering (`## N. Name` → `# Name`) and the file's own dangling trailing separators were normalized, since those were artifacts of the bundled file, not template content.
+
+---
+
 ## Open Items Carried Forward
 
 These are not yet decided and should be resolved before or during early development:
