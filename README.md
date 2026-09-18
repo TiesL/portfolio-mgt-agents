@@ -53,8 +53,10 @@ portfolio-management-agents/
 Run `./check` before committing — it's the single entry point for
 everything that decides whether a change is good (see the
 `check-convention` skill), currently the traceability check
-(`check-traceability.sh`). No CI workflow exists yet to call it
-automatically (see issue #9) — running it locally is on you until then.
+(`check-traceability.sh`). `.github/workflows/ci.yml` runs the same
+command on every PR and on pushes to `main`, plus the two network-dependent
+traceability links (`check-pr-issue-link.sh`, `check-main-via-pr.sh`) —
+nothing separate is invented for CI.
 
 ## Key Constraints (do not violate without a new Decision Log entry)
 
