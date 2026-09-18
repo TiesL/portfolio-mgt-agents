@@ -142,7 +142,7 @@ What the system deliberately doesn't do or can't do. Stays this way unless
 the scope changes — no action needed.
 
 - No application code exists yet — this whole repository is a specification for a Release 1.0 system still to be built.
-- `docs/prd/PRD.md` and `docs/decisions/DECISION-LOG.md` reference original Dutch-language field documents from co-founder Didier under `reference/didier-source-materials/`; that directory is not present in this repository copy. Treat it as external reference material to be added separately, not as a missing deliverable.
+- `docs/prd/PRD.md` and `docs/decisions/DECISION-LOG.md` reference original Dutch-language field documents from co-founder Didier that were previously under `reference/didier-source-materials/`. That directory has been deliberately removed from this repository (not needed going forward, and not appropriate to publish) — those references are historical pointers, not a missing deliverable.
 
 ## Technical debt
 

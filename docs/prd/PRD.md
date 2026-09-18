@@ -70,4 +70,4 @@ Tracked in full in the Decision Log's "Open Items Carried Forward" section. Head
 
 ## 7. Source Materials
 
-Original field documents from Didier that this PRD's roles and templates were aligned against live under [`../../reference/didier-source-materials/`](../../reference/didier-source-materials/) (Dutch-language RTF, DOCX, PPTX). Treat these as reference/ground truth for structure, not as files to edit.
+This PRD's roles and templates were aligned against original field documents from Didier (Dutch-language RTF, DOCX, PPTX). Those source files are deliberately not part of this repository — not needed going forward, and not appropriate to publish. Ground truth for structure now lives in [`agent-specifications.md`](./agent-specifications.md), [`roles-and-personas.md`](../decisions/roles-and-personas.md), and [`../../templates/execution-templates.md`](../../templates/execution-templates.md).
