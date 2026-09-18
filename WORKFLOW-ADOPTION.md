@@ -6,7 +6,7 @@ the question shows up on its own once that changes.
 
 | Change | Answer | Date | Notes |
 |---|---|---|---|
-| traceability-link-1 | yes | 2026-09-18 | Six agents (F1–F6) each have a fixed, independently testable evaluation process already specified in `docs/prd/agent-specifications.md` — F-number → scenario traceability is straightforward to enforce once test authoring starts. |
+| traceability-link-1 | yes | 2026-09-18 | Six agents (F1–F6) each have a fixed, independently testable evaluation process already specified in `docs/prd/agent-specifications.md` — F-number → scenario traceability is straightforward to enforce once test authoring starts. `./check` now calls `check-traceability.sh` (issue #8), so this row's postcondition holds. |
 | process-prd | yes | 2026-09-18 | This is a spec-first repo; `PRD.md` is the whole point of the current phase. Already substantiated in `PRD.md` itself. |
 | architecture-document | yes | 2026-09-18 | Applies once the first structural decision (agent runtime, orchestration mechanism, template storage) is made — not yet, per `PRD.md`'s Architecture section. `ARCHITECTURE.md` scaffold kept ready for that. |
 | test-unit | yes | 2026-09-18 | Each agent's step-by-step evaluation logic (scoring, classification, format rules) is deterministic enough to unit-test once implemented. |
