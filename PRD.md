@@ -168,3 +168,4 @@ findings land here too. See *Complexity, technical debt, refactoring* in
 | `docs/prd/project-lifecycle-flow.md` | The six-phase governance flow and gate structure (F7). |
 | `docs/diagrams/project_flow_diagram.mermaid` / `.html` | Visual rendering of the lifecycle flow. |
 | `templates/execution-templates.md` | The nine primary + two supporting Markdown governance templates (F8). |
+| `CONTEXT.md` | Project jargon glossary (PID, PSA, Portfolio Board, DEC-XXX, etc.), separate from `ARCHITECTURE.md`'s structural decisions. |
