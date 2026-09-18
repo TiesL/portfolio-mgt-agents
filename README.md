@@ -53,8 +53,8 @@ portfolio-management-agents/
 Run `./check` before committing — it's the single entry point for
 everything that decides whether a change is good (see the
 `check-convention` skill), currently the traceability check
-(`check-traceability.sh`). CI calls the same command; nothing separate is
-invented for either.
+(`check-traceability.sh`). No CI workflow exists yet to call it
+automatically (see issue #9) — running it locally is on you until then.
 
 ## Key Constraints (do not violate without a new Decision Log entry)
 
