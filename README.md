@@ -1,8 +1,8 @@
 # Portfolio Management Agents
 
-Part of the **Decision Velocity** proposition (TiesL & ScripeConnect12). This repository is the specification and starting point for building an agent-based portfolio governance system: a strictly linear, six-phase project lifecycle (Idea → Definition → Design → Realization → Go-Live → Closure) in which specialized advisor agents assess project documentation at each governance gate, and human decision-makers (Portfolio Board, Steering Group) retain all Go/No-Go authority.
+This repository specifies an agent-based portfolio governance system: a strictly linear, six-phase project lifecycle (Idea → Definition → Design → Realization → Go-Live → Closure) in which specialized advisor agents assess project documentation at each governance gate, and human decision-makers (Portfolio Board, Steering Group) retain all Go/No-Go authority.
 
-This is a specification-first repository. No application code exists yet — the intent is to open this repo in Claude Code (Plan Mode recommended for the first pass) and use these documents as the brief for scoping and building the system.
+This is a specification-first repository: a set of work-in-progress documents — PRD, decision log, role definitions, agent specifications, templates — written ahead of building the system they describe. No application code exists yet. The intent is to open this repo in Claude Code (Plan Mode recommended for the first pass) and use these documents as the brief for scoping and building the system.
 
 ## Start Here
 
@@ -69,12 +69,3 @@ nothing separate is invented for CI.
 ## Updating the Decision Log
 
 If a design or scoping decision is made while working in this repo — including ones proposed by an agent and approved by a human — add a new dated entry to `docs/decisions/DECISION-LOG.md` rather than editing history. If a decision supersedes an earlier one, mark the earlier entry "Superseded by Entry N" (see Entry 2 for the pattern) rather than deleting it.
-
-## Relationship to the Wider Decision Velocity Proposition
-
-Decision Velocity has two building blocks operating at different cadences:
-
-- **Portfolio Management Agents** (this repo) — the portfolio cycle.
-- **Software Development Workflow Agents** (separate system, not in this repo) — the product/release/sprint/day cycle. That system is intentionally *non-linear* (looping, exception paths, phase-skipping are all permitted there), which is the opposite of this system's strictly linear model — don't import assumptions from one into the other.
-
-Integration/handoff points between the two systems are a known, deliberately deferred gap.
