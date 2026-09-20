@@ -2,6 +2,7 @@
 *.log
 .env
 node_modules/
+.claude/*.lock
 
 # claude-workflow: begin — managed block, do not edit by hand
 CLAUDE.md
