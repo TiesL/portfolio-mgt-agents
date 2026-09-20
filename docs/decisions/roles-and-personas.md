@@ -17,7 +17,7 @@ The portfolio management agents system serves multiple interconnected roles orga
 - **Execution Tier** (Day-to-day project delivery): Project Manager, Project Team Members/SMEs
 - **Supporting Roles** (Process and administrative support): Financial/Resource Manager, Organizational Administrator
 
-These roles interact with the system at different phases and have distinct needs for information, decision support, and status tracking. The structure reflects Didier's portfolio governance model emphasizing clear accountability at each level.
+These roles interact with the system at different phases and have distinct needs for information, decision support, and status tracking. The structure reflects ScripeConnect12's portfolio governance model emphasizing clear accountability at each level.
 
 ---
 
@@ -465,10 +465,10 @@ The role descriptions above define functional needs, not job titles. A small org
 
 ## Source & Alignment Notes
 
-This role structure is based on **Didier's portfolio governance framework** documented in "Portfolio Management Rolbeschrijvingen.rtf". Key alignment points:
+This role structure is based on **ScripeConnect12's portfolio governance framework** documented in "Portfolio Management Rolbeschrijvingen.rtf". Key alignment points:
 
-- **Portfolio Board composition** reflects Didier's emphasis on Portfolio Owner (executive sponsor), Business Owners (divisional representation), CFO (financial governance)
-- **Steering Group structure** follows Didier's standard model of Project Sponsor (Opdrachtgever), Senior User, and Senior Supplier
+- **Portfolio Board composition** reflects ScripeConnect12's emphasis on Portfolio Owner (executive sponsor), Business Owners (divisional representation), CFO (financial governance)
+- **Steering Group structure** follows ScripeConnect12's standard model of Project Sponsor (Opdrachtgever), Senior User, and Senior Supplier
 - **Three-tier model** (Portfolio Board → Steering Group → Execution) emphasizes clear accountability and decision authority at each level
 - **Flexibility in organization size**: Portfolio Manager role is optional; smaller organizations may have fewer distinct positions
 
@@ -495,7 +495,7 @@ This role structure is based on **Didier's portfolio governance framework** docu
 ## Decision Summary
 
 **Completed:**
-- Aligned role structure with Didier's Portfolio Board and Steering Group model
+- Aligned role structure with ScripeConnect12's Portfolio Board and Steering Group model
 - Expanded Portfolio Board from generic "member" into 4 specific roles: Portfolio Owner, Business Owner, CFO, Portfolio Manager
 - Expanded Steering Group from generic "member" into 3 specific roles: Project Sponsor, Senior User, Senior Supplier
 - Clarified reporting relationships and interactions between tiers

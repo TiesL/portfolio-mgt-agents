@@ -2,7 +2,7 @@
 
 **Status:** Proposal/design for functionality still to be built. No application code exists yet; this document, `docs/`, and `templates/` are the complete Release 1.0 product brief. See `docs/prd/PRD.md` for the full narrative version (problem statement, goals, non-goals, source materials) — this file is the traceable, F-numbered functionality list required by the shared workflow, kept in sync with it.
 
-Part of the Decision Velocity proposition (Ties & Didier). This system covers the *portfolio* governance cycle; the sibling system, Software Development Workflow Agents, covers product/release/sprint/day. Integration between the two is an acknowledged, deferred gap (`docs/decisions/DECISION-LOG.md` — Open Items Carried Forward).
+Part of the Decision Velocity proposition (TiesL & ScripeConnect12). This system covers the *portfolio* governance cycle; the sibling system, Software Development Workflow Agents, covers product/release/sprint/day. Integration between the two is an acknowledged, deferred gap (`docs/decisions/DECISION-LOG.md` — Open Items Carried Forward).
 
 ---
 
@@ -50,7 +50,7 @@ Assesses a completed project end report (Closure phase gate) for completeness an
 Enforces the strictly linear phase sequence (Idea → Definition → Design → Realization → Go-Live → Closure), maintains cross-phase context, facilitates backward loops to an earlier phase when new information emerges, and escalates impediments it cannot resolve to a human. No phase-skipping, no exception/fast-track paths, and no autonomous decision-making (DEC-001, DEC-002 REVISED). Full spec: `docs/prd/project-lifecycle-flow.md`, `docs/decisions/DECISION-LOG.md`.
 
 ### F8 — Execution Templates
-Nine primary and two supporting Markdown templates, one per governance artifact (project idea, brief, PID, PSA, status report, closure report, etc.), each role-aware (states its primary role(s)) and phase-mapped, aligned to Didier's field-tested framework. English language, checkbox/fill-in-the-blank structure. Full spec: `templates/execution-templates.md`.
+Nine primary and two supporting Markdown templates, one per governance artifact (project idea, brief, PID, PSA, status report, closure report, etc.), each role-aware (states its primary role(s)) and phase-mapped, aligned to ScripeConnect12's field-tested framework. English language, checkbox/fill-in-the-blank structure. Full spec: `templates/execution-templates.md`.
 
 ---
 
@@ -142,7 +142,7 @@ What the system deliberately doesn't do or can't do. Stays this way unless
 the scope changes — no action needed.
 
 - No application code exists yet — this whole repository is a specification for a Release 1.0 system still to be built.
-- `docs/prd/PRD.md` and `docs/decisions/DECISION-LOG.md` reference original Dutch-language field documents from co-founder Didier under `reference/didier-source-materials/`. That directory was deliberately never added to this repository (not needed going forward, and not appropriate to publish) — those references are historical pointers, not a missing deliverable.
+- `docs/prd/PRD.md` and `docs/decisions/DECISION-LOG.md` reference original Dutch-language field documents from co-founder ScripeConnect12 under `reference/scripeconnect12-source-materials/`. That directory was deliberately never added to this repository (not needed going forward, and not appropriate to publish) — those references are historical pointers, not a missing deliverable.
 
 ## Technical debt
 

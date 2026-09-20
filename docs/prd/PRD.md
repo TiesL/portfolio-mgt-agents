@@ -1,7 +1,7 @@
 # Product Requirements Document — Portfolio Management Agents
 
 **Status:** Draft / Release 1.0 specification
-**Part of:** the Decision Velocity proposition (Ties & Didier). This system covers the *portfolio* cycle — the sibling system, Software Development Workflow Agents, covers the product/release/sprint/day cycle. Integration between the two is an acknowledged, deferred gap (see [Decision Log — Open Items](../decisions/DECISION-LOG.md#open-items-carried-forward)).
+**Part of:** the Decision Velocity proposition (TiesL & ScripeConnect12). This system covers the *portfolio* cycle — the sibling system, Software Development Workflow Agents, covers the product/release/sprint/day cycle. Integration between the two is an acknowledged, deferred gap (see [Decision Log — Open Items](../decisions/DECISION-LOG.md#open-items-carried-forward)).
 
 ---
 
@@ -14,7 +14,7 @@ Organizations running project portfolios need consistent, decision-ready informa
 - Give every project a consistent, criteria-based assessment at each governance gate, regardless of who wrote the submission or who reviews it.
 - Preserve human decision authority at every gate (see [DEC-001](../decisions/DECISION-LOG.md#entry-1)).
 - Enforce a strictly linear governance process with no phase-skipping and no exception paths, with backward looping as the only flexibility mechanism (see [DEC-002 REVISED](../decisions/DECISION-LOG.md#entry-2-revised)).
-- Produce templates and assessments that plug into an organization's existing governance documents rather than replacing them (see [DEC-004](../decisions/DECISION-LOG.md#entry-4), aligned to Didier's field-tested framework).
+- Produce templates and assessments that plug into an organization's existing governance documents rather than replacing them (see [DEC-004](../decisions/DECISION-LOG.md#entry-4), aligned to ScripeConnect12's field-tested framework).
 - Support organizations of any size and industry — role descriptions are functional, not fixed job titles (see [DEC-003](../decisions/DECISION-LOG.md#entry-3)).
 
 ## 3. Non-Goals (Release 1.0)
@@ -58,7 +58,7 @@ Eleven roles across four tiers (Portfolio Board, Steering Group, Execution, Supp
 
 ### 4.4 Templates
 
-Nine primary + two supporting Markdown templates, role-aware and phase-mapped, aligned to Didier's field templates, each in its own file. See [`../../templates/execution-templates.md`](../../templates/execution-templates.md) for the index.
+Nine primary + two supporting Markdown templates, role-aware and phase-mapped, aligned to ScripeConnect12's field templates, each in its own file. See [`../../templates/execution-templates.md`](../../templates/execution-templates.md) for the index.
 
 ## 5. Key Decisions
 
@@ -70,4 +70,4 @@ Tracked in full in the Decision Log's "Open Items Carried Forward" section. Head
 
 ## 7. Source Materials
 
-This PRD's roles and templates were aligned against original field documents from Didier (Dutch-language RTF, DOCX, PPTX). Those source files are deliberately not part of this repository — not needed going forward, and not appropriate to publish. Ground truth for structure now lives in [`agent-specifications.md`](./agent-specifications.md), [`roles-and-personas.md`](../decisions/roles-and-personas.md), and the templates indexed at [`../../templates/execution-templates.md`](../../templates/execution-templates.md).
+This PRD's roles and templates were aligned against original field documents from ScripeConnect12 (Dutch-language RTF, DOCX, PPTX). Those source files are deliberately not part of this repository — not needed going forward, and not appropriate to publish. Ground truth for structure now lives in [`agent-specifications.md`](./agent-specifications.md), [`roles-and-personas.md`](../decisions/roles-and-personas.md), and the templates indexed at [`../../templates/execution-templates.md`](../../templates/execution-templates.md).

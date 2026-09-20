@@ -7,7 +7,7 @@ make it complete in one go.
 
 | Term | Meaning |
 |---|---|
-| PID | Project Initiation Document — the artifact assessed at the Design phase gate (F4). Not to be confused with a process ID; this is governance terminology from Didier's field framework. |
+| PID | Project Initiation Document — the artifact assessed at the Design phase gate (F4). Not to be confused with a process ID; this is governance terminology from ScripeConnect12's field framework. |
 | PSA | Project Start Architecture — an optional architecture-quality document reviewed alongside the PID at the Design phase gate (F5), assessed across eight architecture areas. |
 | Portfolio Board | The governance tier that decides at the Idea, Definition, Design, and Closure gates. Functional role, not a fixed job title (DEC-003) — a small org may combine it with other roles. |
 | Steering Group | The governance tier that decides at the Realization (status/escalation) and Go-Live gates. Functional role, not a fixed job title (DEC-003). |

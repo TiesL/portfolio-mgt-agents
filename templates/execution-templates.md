@@ -1,6 +1,6 @@
 # Portfolio Management Execution Templates & Checklists
 
-*Role-Aware Templates aligned with Didier's Portfolio Governance Model*
+*Role-Aware Templates aligned with ScripeConnect12's Portfolio Governance Model*
 
 Each template previously lived as a section in this file. They're now split
 into standalone files (one per template, named after the template itself)
