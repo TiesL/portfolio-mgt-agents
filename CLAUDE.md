@@ -1,6 +1,6 @@
 # Method — Git/GitHub Workflow
 
-Static copy of the shared workflow from [spec-driven-guardrails](https://github.com/TiesL/spec-driven-guardrails)'s `WORKFLOW.md`, as of the date this file was last synced here. Other adopted projects normally symlink to that file directly, but a symlink resolves to a local absolute path — not portable outside the machine it was created on, and inappropriate for a public repo. If this drifts from the source, treat the source repo as canonical.
+Static copy of the shared workflow from [spec-driven-guardrails](https://github.com/TiesL/spec-driven-guardrails)'s `WORKFLOW.md`, last synced 2026-09-20. Other adopted projects normally symlink to that file directly, but a symlink resolves to a local absolute path — not portable outside the machine it was created on, and inappropriate for a public repo. If this drifts from the source, treat the source repo as canonical.
 
 This project is developed from multiple computers. Follow this workflow in every session, regardless of which machine you're working on.
 
