@@ -1,6 +1,6 @@
 # Portfolio Management Agents
 
-Part of the **Decision Velocity** proposition (Ties & Didier). This repository is the specification and starting point for building an agent-based portfolio governance system: a strictly linear, six-phase project lifecycle (Idea → Definition → Design → Realization → Go-Live → Closure) in which specialized advisor agents assess project documentation at each governance gate, and human decision-makers (Portfolio Board, Steering Group) retain all Go/No-Go authority.
+Part of the **Decision Velocity** proposition (TiesL & ScripeConnect12). This repository is the specification and starting point for building an agent-based portfolio governance system: a strictly linear, six-phase project lifecycle (Idea → Definition → Design → Realization → Go-Live → Closure) in which specialized advisor agents assess project documentation at each governance gate, and human decision-makers (Portfolio Board, Steering Group) retain all Go/No-Go authority.
 
 This is a specification-first repository. No application code exists yet — the intent is to open this repo in Claude Code (Plan Mode recommended for the first pass) and use these documents as the brief for scoping and building the system.
 
@@ -14,7 +14,7 @@ This is a specification-first repository. No application code exists yet — the
 6. **[`templates/execution-templates.md`](templates/execution-templates.md)** — index into the actual Markdown templates (project idea, brief, PID, PSA, status report, go/no-go, change request, closure, etc.), each in its own file, that the agents assess against and that end users fill in.
 7. **[`docs/diagrams/`](docs/diagrams/)** — visual flowchart of the lifecycle (Mermaid source + rendered HTML).
 
-Didier's original Dutch-language field documents (RTF/DOCX/PPTX) that this system's roles and templates were aligned against are deliberately **not** in this repo — not needed going forward, and not appropriate to publish. If a template needs to change, change `templates/execution-templates.md` and log why in the Decision Log.
+ScripeConnect12's original Dutch-language field documents (RTF/DOCX/PPTX) that this system's roles and templates were aligned against are deliberately **not** in this repo — not needed going forward, and not appropriate to publish. If a template needs to change, change `templates/execution-templates.md` and log why in the Decision Log.
 
 ## Repository Structure
 
@@ -63,8 +63,8 @@ nothing separate is invented for CI.
 - **Strictly linear governance.** No phase-skipping, no exception paths. The only flexibility mechanism is looping back to an earlier phase. (DEC-002 REVISED)
 - **Humans decide, agents assess.** No agent has Go/No-Go authority in Release 1.0. (DEC-001)
 - **Role descriptions are functional, not job titles.** The system must work for organizations of any size — a small org may combine several roles into one person. (DEC-003)
-- **English + Markdown, role-aware, checkbox/fill-in-the-blank format** for all templates, even though the source materials from Didier are in Dutch and Word/PowerPoint. (DEC-004)
-- **No client-identifying examples** (e.g. the Feyenoord references present in Didier's original source RTF) in anything we produce.
+- **English + Markdown, role-aware, checkbox/fill-in-the-blank format** for all templates, even though the source materials from ScripeConnect12 are in Dutch and Word/PowerPoint. (DEC-004)
+- **No client-identifying examples** (e.g. the Feyenoord references present in ScripeConnect12's original source RTF) in anything we produce.
 
 ## Updating the Decision Log
 

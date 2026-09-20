@@ -96,7 +96,7 @@ A meta-agent orchestrator provides intelligent coordination and context manageme
 **Status:** In Development (Release 1.0)
 
 **Decision Made:**
-Role structure organized into four tiers, aligned with Didier's portfolio governance framework (`reference/didier-source-materials/Portfolio Management Rolbeschrijvingen.rtf`):
+Role structure organized into four tiers, aligned with ScripeConnect12's portfolio governance framework (`reference/scripeconnect12-source-materials/Portfolio Management Rolbeschrijvingen.rtf`):
 
 - **Portfolio Board Tier** (strategic): Portfolio Owner, Business Owner/Division Head, CFO, Portfolio Manager (optional)
 - **Steering Group Tier** (project execution oversight): Project Sponsor (Opdrachtgever), Senior User, Senior Supplier
@@ -106,11 +106,11 @@ Role structure organized into four tiers, aligned with Didier's portfolio govern
 Full role descriptions (who they are, when they interact, what they need from the system) are documented in [`roles-and-personas.md`](./roles-and-personas.md).
 
 **Rationale:**
-- Portfolio Board composition reflects Didier's model: Portfolio Owner (executive sponsor), Business Owners (divisional representation), CFO (financial governance)
-- Steering Group structure follows Didier's standard PRINCE2-style model: Opdrachtgever, Senior User, Senior Supplier
+- Portfolio Board composition reflects ScripeConnect12's model: Portfolio Owner (executive sponsor), Business Owners (divisional representation), CFO (financial governance)
+- Steering Group structure follows ScripeConnect12's standard PRINCE2-style model: Opdrachtgever, Senior User, Senior Supplier
 - The three governance tiers (Portfolio Board → Steering Group → Execution) preserve clear accountability and decision authority at each level
 - Role descriptions define functional needs, not job titles — organizations of any size can combine or split roles as needed
-- Client-specific examples (e.g. Feyenoord) from Didier's source material were generalized/removed from our documentation
+- Client-specific examples (e.g. Feyenoord) from ScripeConnect12's source material were generalized/removed from our documentation
 
 **Status:** Role structure is defined; open questions on advisor-vs-user role separation, access/permission model, and role-specific dashboards remain tracked in `roles-and-personas.md` under "Questions for Refinement."
 
@@ -119,28 +119,28 @@ Full role descriptions (who they are, when they interact, what they need from th
 ## Entry 4
 
 **Decision ID:** DEC-004
-**Topic:** Execution Template Alignment with Didier's Framework
+**Topic:** Execution Template Alignment with ScripeConnect12's Framework
 **Status:** Approved (Release 1.0)
 
 **Decision Made:**
-Align all execution templates with the structure and content of the templates Didier provided (`reference/didier-source-materials/templates/`), while:
+Align all execution templates with the structure and content of the templates ScripeConnect12 provided (`reference/scripeconnect12-source-materials/templates/`), while:
 - Keeping Markdown format (not Word/PowerPoint)
 - Keeping English language only
 - Keeping checkbox/checklist/fill-in-the-blank structure
 - Making every template role-aware (explicit "Primary Roles" designation)
-- Creating new Markdown versions of Didier's templates that we didn't previously have
+- Creating new Markdown versions of ScripeConnect12's templates that we didn't previously have
 
 **Options Considered:**
 - Keep our original generic templates unchanged — Denied
-- Adopt Didier's templates as-is in Word/PowerPoint format — Denied (format/language requirements)
-- **Align content/structure with Didier's templates, rebuild in Markdown, English, role-aware — CHOSEN**
+- Adopt ScripeConnect12's templates as-is in Word/PowerPoint format — Denied (format/language requirements)
+- **Align content/structure with ScripeConnect12's templates, rebuild in Markdown, English, role-aware — CHOSEN**
 
 **Rationale:**
-Didier's templates reflect real, field-tested governance documents already in use. Aligning our system's templates to that structure means the tool produces artifacts that plug directly into an organization's existing governance process rather than introducing a parallel, incompatible format. Markdown was retained (over replicating Word/PowerPoint) because it is the native format for agent-generated output and version control.
+ScripeConnect12's templates reflect real, field-tested governance documents already in use. Aligning our system's templates to that structure means the tool produces artifacts that plug directly into an organization's existing governance process rather than introducing a parallel, incompatible format. Markdown was retained (over replicating Word/PowerPoint) because it is the native format for agent-generated output and version control.
 
-**Result:** `templates/execution-templates.md` contains 9 primary templates + 2 supporting templates, each mapped to a lifecycle phase and to the primary role(s) who use it. New templates created to cover gaps versus Didier's set: Project Brief, Project Initiation Document (PID), Project Start Architecture, Go/No-Go Decision, Change Request.
+**Result:** `templates/execution-templates.md` contains 9 primary templates + 2 supporting templates, each mapped to a lifecycle phase and to the primary role(s) who use it. New templates created to cover gaps versus ScripeConnect12's set: Project Brief, Project Initiation Document (PID), Project Start Architecture, Go/No-Go Decision, Change Request.
 
-**Note:** All references to the Feyenoord client example present in Didier's source material were removed from our derived documentation, per explicit instruction.
+**Note:** All references to the Feyenoord client example present in ScripeConnect12's source material were removed from our derived documentation, per explicit instruction.
 
 ---
 
@@ -161,7 +161,7 @@ Split `templates/execution-templates.md`'s 11 templates into one standalone `.md
 **Rationale:**
 Splitting makes each template independently readable/editable/referenceable. Keeping the original file as an index means every existing "the templates live at `templates/execution-templates.md`" reference in this repo remains correct as written — it's now the entry point into the set rather than the set itself, with no cross-reference rewrites required.
 
-**Filename note:** Template 7's actual name contains a `/` ("Go/No-Go Decision Template"), which cannot be a literal filename component. Confirmed with Ties: the file is `Go_No-Go Decision Template.md` (underscore replacing the slash); the index and every reference display the real name with the slash, only the filename itself substitutes it.
+**Filename note:** Template 7's actual name contains a `/` ("Go/No-Go Decision Template"), which cannot be a literal filename component. Confirmed with TiesL: the file is `Go_No-Go Decision Template.md` (underscore replacing the slash); the index and every reference display the real name with the slash, only the filename itself substitutes it.
 
 **Result:** `templates/` now contains `execution-templates.md` (index) plus 11 standalone template files. Content was moved verbatim; only the per-template heading level/numbering (`## N. Name` → `# Name`) and the file's own dangling trailing separators were normalized, since those were artifacts of the bundled file, not template content.
 
