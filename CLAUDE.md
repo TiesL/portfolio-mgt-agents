@@ -1,8 +1,8 @@
 # Method — Git/GitHub Workflow
 
-Static copy of the shared workflow from [spec-driven-guardrails](https://github.com/TiesL/spec-driven-guardrails)'s `WORKFLOW.md`, last synced 2026-09-20. Other adopted projects normally symlink to that file directly, but a symlink resolves to a local absolute path — not portable outside the machine it was created on, and inappropriate for a public repo. If this drifts from the source, treat the source repo as canonical.
-
 This project is developed from multiple computers. Follow this workflow in every session, regardless of which machine you're working on.
+
+Static copy of the shared workflow from [spec-driven-guardrails](https://github.com/TiesL/spec-driven-guardrails)'s `WORKFLOW.md`, last synced 2026-09-26. Other adopted projects normally symlink to that file directly, but a symlink resolves to a local absolute path — not portable outside the machine it was created on, and inappropriate for a public repo. If this drifts from the source, treat the source repo as canonical.
 
 ## Branch strategy: GitHub Flow
 
@@ -10,7 +10,7 @@ This project is developed from multiple computers. Follow this workflow in every
 - All work happens on a short-lived branch from the current `main`, named after the issue it implements:
   - `feature/<issue-number>-<kebab-case-description>` for new functionality/epics
   - `fix/<issue-number>-<kebab-case-description>` for bug fixes (including trivial ones, such as documentation corrections)
-- **No request leads straight to development.** What's being built is specified in an issue first — see the `write-spec` skill for the epic/work-item templates. The branch name can't even be written without that issue's number, and `git-guardrails`/the native `pre-commit` hook enforce the pattern.
+- **No request leads straight to development.** What's being built is specified in an issue first — see the `write-spec` skill for the epic/work-item templates. The branch name can't even be written without that issue's number. **This includes editing a tracked file at all, even a draft you plan to show before committing** — `git-guardrails`/the native `pre-commit` hook enforce the branch-naming and commit-on-main parts of this mechanically, but neither one sees an `Edit`/`Write` tool call (only `Bash`), so nothing mechanical stops the file itself from being changed before the issue and branch exist. "I'll draft it on `main` and ask before committing" is exactly the violation this rule rules out, not an exception to it — create the issue and branch first, then edit.
 
 ## When starting a session
 
@@ -28,9 +28,11 @@ This project is developed from multiple computers. Follow this workflow in every
 
 ## Wrapping up
 
+**Confirmation is required only before merge (step 4 below).** Committing, pushing, opening a PR, and running the review all proceed without asking — do not invent an extra approval checkpoint at any of those points, even right after being corrected on a different mistake. If something about the change is genuinely unclear, ask that specific question directly instead of adding a generic "approve to proceed?" gate.
+
 1. Once the change is complete and tested (and, where applicable, manually verified): open a PR with `gh pr create`. If the PR refers to an issue (`Closes #N`), put that link in the **PR description itself**, not only in a commit message: GitHub populates `closingIssuesReferences` — the field that issue-linking checks actually test against — exclusively from the PR title/body. A commit with `Closes #N` does close the issue on a merge to `main`, but such a check won't see the link while the PR is still open.
 2. **Run the quality review immediately, in parallel with CI, not gated on CI being green** — don't ask whether to, don't wait to be asked, don't wait for CI first; see the `pre-merge-review` skill. The review's marker is pinned to the commit it reviewed, so a commit that lands afterward (a fixup, or a fix for a red CI) simply needs a fresh review, whenever it runs — nothing slips through unreviewed.
-3. Before asking for merge confirmation, know that CI has actually finished — the merge guard blocks the merge otherwise, and asking prematurely just costs a round trip. Don't poll `gh pr checks` on a short fixed interval — measured against this repo's own last 10 completed CI runs (`gh run list --json createdAt,updatedAt`), durations cluster at 5.5-8 minutes (one outlier at ~23min), so a 20s interval produces a dozen-plus "still pending" checks before CI ever finishes (issue #215). Instead: first check no sooner than 5 minutes after the run starts, then every 1 minute until it reaches a terminal state.
+3. Before asking for merge confirmation, know that CI has actually finished — the merge guard blocks the merge otherwise, and asking prematurely just costs a round trip. Don't poll `gh pr checks` on a short fixed interval — measured against this repo's own last 10 completed CI runs (`gh run list --json createdAt,updatedAt`), durations cluster at 5.5-8 minutes (one outlier at ~23min), so a 20s interval produces a dozen-plus "still pending" checks before CI ever finishes (issue #215). Run `./wait-for-ci.sh <pr-number>` instead of polling by hand (issue #265) — it waits 5 minutes before the first check, then every 1 minute until CI reaches a terminal state, and exits non-zero if anything failed. That interval is a documented agreement precisely so an agent can't quietly improvise a shorter one; encoding it in a script closes that gap the same way a prose-only rule can't.
 4. **Wait for TiesL's explicit confirmation** that the test succeeded and there's no regression, before merging. Never merge automatically without that confirmation.
 5. Then merge with `gh pr merge --squash --delete-branch` — this keeps the history on `main` clean and cleans up the branch (local and remote) immediately.
 
@@ -51,6 +53,8 @@ This file holds what every session needs. For everything else: the table below r
 | Diagnosing a bug: reproduction → hypotheses → regression test → fix | `diagnose-bug` |
 | Which model/reasoning effort to use for a pipeline stage | `model-choice` |
 | Setting up a new (related) project | `adopt-workflow` (user-level) |
+| Relentless, round-based requirement elicitation from Ties | `grilling` |
+| Decomposing a system into deep modules, not shallow components | `codebase-design` |
 
 ## Why
 
